@@ -1,23 +1,18 @@
 # Sequenza LED Crepuscolare (4 LED)
 
-Questo progetto evolve il test base del sensore LM393 creando una sequenza di attivazione temporizzata di 4 LED.
+Questo progetto esplora la gestione di più uscite digitali attivate da un sensore di luce LM393.
 
-## 🚀 Funzionamento
-Quando il sensore rileva il superamento della soglia di buio:
-1. Si accende il primo LED (Pin 9).
-2. Dopo 1 secondo si accende il secondo (Pin 10).
-3. Dopo un altro secondo il terzo (Pin 11).
-4. Dopo un ultimo secondo il quarto (Pin 12).
-Tutti i LED rimangono accesi finché persiste il buio. Quando torna la luce, il sistema si resetta spegnendo tutto.
+## 📁 Versioni del Progetto
+Ho implementato due varianti del codice per mostrare diversi livelli di complessità:
+
+1. **[Versione Base](./03a_sequenza_crepuscolare_base.ino)**: Una sequenza lineare dove i LED si accendono uno dopo l'altro ogni secondo e restano fissi. Ideale per testare i collegamenti.
+2. **[Versione Avanzata (KITT Mode)](./03b_effetto_kitt.ino)**: Utilizza **Array** e **cicli for** per creare un effetto scanner "Supercar". Il codice è più ottimizzato e fluido.
 
 ## 🔌 Schema di Collegamento
-* **Sensore LM393**: VCC -> 5V, GND -> GND, D0 -> Pin 7.
-* **LED 1**: Pin 9 (con resistenza 220Ω).
-* **LED 2**: Pin 10 (con resistenza 220Ω).
-* **LED 3**: Pin 11 (con resistenza 220Ω).
-* **LED 4**: Pin 12 (con resistenza 220Ω).
+* **Sensore LM393**: D0 -> Pin 7
+* **LEDs**: Pin 9, 10, 11, 12 (tutti con resistenza da 220Ω verso GND)
 
-## 🛠️ Competenze acquisite
-- Gestione di uscite multiple in parallelo.
-- Utilizzo della funzione `delay()` per la temporizzazione.
-- Controllo di flusso condizionale (`if-else`) basato su input digitale.
+## 💡 Concetti Appresi
+- Ottimizzazione del codice tramite Array e cicli `for`.
+- Gestione della temporizzazione non lineare.
+- Organizzazione di un progetto multi-file.
