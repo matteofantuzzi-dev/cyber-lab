@@ -1,0 +1,6 @@
+# Escludi i dati sensibili e il database delle password
+vw-data/
+*.db
+*.db-wal
+*.db-shm
+.env
