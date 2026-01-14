@@ -1,0 +1,19 @@
+version: '3.8'
+
+# Configurazione del server Vaultwarden per Raspberry Pi
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: always
+    environment:
+      # PORTA: Specifica la porta interna su cui gira il servizio
+      - ROCKET_PORT=8080
+      # SICUREZZA: Una volta creato il tuo utente, questo deve restare false
+      - SIGNUPS_ALLOWED=false
+      # OPZIONALE: Abilita o disabilita l'interfaccia di amministrazione
+      - ADMIN_TOKEN=cambiami_con_una_stringa_casuale 
+    volumes:
+      # Persistenza dei dati: cartella locale 'vw-data' montata nel container
+      - ./vw-data:/data
+    network_mode: host # Permette a Tailscale di "vedere" il servizio sulla rete locale
