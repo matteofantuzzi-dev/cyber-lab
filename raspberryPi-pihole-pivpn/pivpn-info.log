@@ -1,0 +1,7 @@
+Configurazione WireGuard (Sanitized):
+- Listening Port: 51820 (Protocol: UDP)
+- VPN Subnet: [INTERNAL_VPN_SUBNET]/24
+- Primary DNS: [RASPBERRY_PI_LOCAL_IP] (Pi-hole Instance)
+- Secondary DNS: Optional (e.g., 1.1.1.1)
+- Physical Interface: eth0 (Ethernet)
+- Remote Endpoint: [PUBLIC_WAN_IP]:51820
