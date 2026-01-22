@@ -1,7 +1,19 @@
-Configurazione WireGuard (Sanitized):
-- Listening Port: 51820 (Protocol: UDP)
-- VPN Subnet: [INTERNAL_VPN_SUBNET]/24
-- Primary DNS: [RASPBERRY_PI_LOCAL_IP] (Pi-hole Instance)
-- Secondary DNS: Optional (e.g., 1.1.1.1)
-- Physical Interface: eth0 (Ethernet)
-- Remote Endpoint: [PUBLIC_WAN_IP]:51820
+-- LOG DI CONFIGURAZIONE --
+
+[RETE LOCALE]
+- IP Raspberry (LAN): 192.168.8.x
+- IP Smartphone (Statico): 192.168.8.199
+
+[TAILSCALE SETUP]
+- Installazione: curl -fsSL https://tailscale.com/install.sh | sh
+- Status: Active
+- MagicDNS: Enabled
+- Exit Node: Configurato per navigazione sicura da remoto.
+
+[PI-HOLE SETUP]
+- Interface: eth0 + tailscale0
+- DNS Upstream: Google/Cloudflare
+- Blacklist: Default + personalizzate.
+
+[ACCESSO REMOTO]
+- RDP funzionante su IP 100.x.y.z (Tailscale IP).
