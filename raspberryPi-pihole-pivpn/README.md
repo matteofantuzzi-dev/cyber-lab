@@ -1,22 +1,23 @@
-# Progetto: Ad-Blocking VPN (Pi-hole + PiVPN)
+# Progetto: Secure DNS & Remote Access Lab
+**Integrazione Pi-hole + Tailscale Mesh VPN**
 
-## Descrizione
-Realizzazione di un server domestico su Raspberry Pi per il filtraggio del traffico DNS (Pi-hole) e accesso sicuro dall'esterno tramite protocollo WireGuard (PiVPN).
+## 🎯 Obiettivo
+Realizzare un sistema di filtraggio DNS (Ad-blocking) centralizzato e un accesso remoto sicuro ai dispositivi della rete locale senza l'esposizione di porte pubbliche (Port Forwarding), superando le limitazioni hardware dei router consumer e degli extender Wi-Fi.
 
-## Stack Tecnologico
-- **Hardware**: Raspberry Pi collegato via LAN.
-- **OS**: Raspberry Pi OS (Debian based).
-- **Software**: Pi-hole, PiVPN (WireGuard).
-- **Network**: Router ZTE con Port Forwarding.
+## 🛠️ Architettura Finale
+Dopo una fase iniziale di test con WireGuard (PiVPN), l'architettura è stata evoluta in una **Mesh VPN** per garantire maggiore stabilità e sicurezza OpSec.
 
-## Diario di Configurazione
-- **Step 1**: Installazione Pi-hole e configurazione IP statico su interfaccia `eth0` (`192.168.8.203`).
-- **Step 2**: Installazione PiVPN e generazione profilo client WireGuard.
-- **Step 3**: Configurazione Virtual Server su Router ZTE (Porta UDP 51820).
-- **Issue riscontrata**: Problemi di instradamento dovuti all'uso di un Wi-Fi Extender tra Raspberry e Router.
-- **Soluzione prevista**: Collegamento diretto LAN al router principale per eliminare conflitti ARP/IP e latenza dell'extender.
+- **DNS Server**: Pi-hole (Local Sinkhole)
+- **VPN Protocol**: Tailscale (basato su WireGuard)
+- **Remote Access**: RDP over Tailscale (Desktop Remoto sicuro)
+- **Network Path**: Router ZTE -> Ethernet Switch -> Raspberry Pi
 
-## Comandi Utili
-- Verifica VPN: `pivpn -c`
-- Generazione QR: `pivpn -qr`
-- Stato Pi-hole: `pihole status`
+## 📈 Evoluzione e Troubleshooting
+Durante lo sviluppo è stato riscontrato un conflitto ARP/IP dovuto all'uso di un Wi-Fi Extender. 
+1. **Problema**: L'extender creava instabilità nel Port Forwarding (UDP 51820).
+2. **Soluzione**: Collegamento fisico via LAN allo switch principale e migrazione verso Tailscale.
+3. **Risultato**: Accesso remoto garantito anche sotto reti CGNAT o dietro firewall restrittivi.
+
+## ⚙️ Configurazione Tecnica
+- **Interfaccia d'ascolto Pi-hole**: `Permit all origins` (per accettare richieste dal tunnel Tailscale).
+- **Global DNS (Tailscale Admin)**: IP virtuale del Raspberry impostato come Nameserver primario con `Override Local DNS` attivo.
