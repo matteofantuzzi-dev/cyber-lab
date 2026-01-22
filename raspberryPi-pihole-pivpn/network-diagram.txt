@@ -1,0 +1,12 @@
+[ INTERNET ] 
+      |
+[ IP Pubblico: 78.212.xxx.xxx ]
+      |
+[ Router ZTE (Gateway: 192.168.8.1) ]
+      |
+      +-- [ Port Forward: UDP 51820 ] --> [ Raspberry Pi (.203) ]
+      |                                          |
+      |                                   [ Servizio WireGuard ]
+      |                                   [ Servizio Pi-hole ]
+      |
+      +-- [ Smartphone (.199) ] --- (Tunnel VPN attivo in 4G) ---+
