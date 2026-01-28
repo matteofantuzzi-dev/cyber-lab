@@ -1,0 +1,11 @@
+# Backup dati (Ogni notte alle 02:00)
+00 02 * * * /usr/bin/python3 /home/pirasp/scripts/backup_manager.py
+
+# Aggiornamento OS (Lunedì alle 04:00)
+00 04 * * 1 /usr/bin/python3 /home/pirasp/scripts/system_update.py
+
+# Aggiornamento Pi-hole (Lunedì alle 04:30)
+30 04 * * 1 /usr/bin/python3 /home/pirasp/scripts/pihole_updates.py update
+
+# Report Sicurezza (Domenica alle 21:00)
+00 21 * * 7 sudo /usr/bin/python3 /home/pirasp/scripts/pihole_report.py
