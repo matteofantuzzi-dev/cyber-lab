@@ -1,0 +1,5 @@
+# Backup ogni notte alle 02:00
+00 02 * * * /usr/bin/python3 /home/pirasp/scripts/backup_manager.py
+
+# Pulizia dei vecchi file ogni domenica alle 04:00
+00 04 * * 0 /usr/bin/python3 /home/pirasp/scripts/cleanup_backups.py
