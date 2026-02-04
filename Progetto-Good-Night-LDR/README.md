@@ -1,17 +1,48 @@
-# Progetto Good Night - Arduino Cyber-Lab
+# 🏮 Cyber-Lab: Smart Night-Light System (Final Edition)
 
-Sistema di automazione che attiva una sequenza di luci e un messaggio su display LCD quando viene rilevata l'oscurità.
+Benvenuti nel progetto **Cyber-Lab**, un sistema di illuminazione intelligente basato su Arduino Uno. Il sistema rileva l'assenza di luce e attiva una sequenza coreografica che include un semaforo di segnalazione e una serie di 8 LED, concludendosi con un messaggio di saluto sul display LCD.
 
-## Componenti
-- **Sensore**: Fotoresistenza (LDR) su Pin 7.
-- **Luci**: 4 LED su Pin 9, 10, 11, 12.
-- **Display**: LCD 16x2 I2C (SDA su A4, SCL su A5).
+## 🚀 Funzionalità
+- **Startup Diagnostic**: All'accensione, il sistema esegue un test del display e un feedback sonoro (mini-beep).
+- **Rilevamento Crepuscolare**: Attivazione automatica tramite sensore di luce.
+- **Semaforo Inverso**: Sequenza di avvio Rosso -> Giallo -> Verde (500ms cad.).
+- **Sequenza LED**: Accensione progressiva di 8 LED (700ms cad.).
+- **Display I2C**: Visualizzazione dinamica degli stati ("SYSTEM READY", "GOOD NIGHT").
+- **Monitoraggio Seriale**: Log completo di ogni evento (rilevamento buio, stato LED, reset luce).
 
-## Funzionamento
-1. Al buio i LED si accendono in cascata.
-2. Al termine, i LED si spengono e il display mostra "GOOD NIGHT".
-3. Dopo 4 secondi il display si oscura per risparmio energetico.
-4. Il sistema si resetta automaticamente al ritorno della luce.
+## 🛠️ Hardware Necessario
+| Componente | Quantità | Note |
+| :--- | :--- | :--- |
+| Arduino Uno R3 | 1 | Microcontrollore principale |
+| Display LCD 16x2 I2C | 1 | Indirizzo 0x27 |
+| Sensore di Luce (LDR) | 1 | Collegato al Pin Digitale 7 |
+| Modulo Semaforo | 1 | Pin Verde (A1), Giallo (A2), Rosso (A3) |
+| Buzzer (3-pin) | 1 | Collegato al Pin 6 |
+| LED (Colori vari) | 8 | Resistenze da 220 ohm incluse |
 
-## Ottimizzazioni
-È stata ridotta la frequenza del bus I2C a 10kHz e implementata la stampa a caratteri singoli per ovviare a problemi di instabilità nei collegamenti jumper.
+## 🔌 Schema di Collegamento (Pin Map)
+Il progetto utilizza quasi tutti i pin disponibili per massimizzare l'output visivo:
+
+### Display & Sensori
+- **LCD I2C**: SDA -> A4, SCL -> A5, VCC -> 5V, GND -> GND
+- **Sensore Luce**: Signal -> Pin 7
+- **Buzzer**: Signal -> Pin 6
+
+### Output Visivi
+- **Semaforo**: Verde (A1), Giallo (A2), Rosso (A3)
+- **8 LED Sequence**: Pin Digitali 2, 3, 4, 5, 9, 10, 11, 12
+
+## 📜 Logica del Software
+1. **Fase Standby**: Il sistema monitora il Pin 7. Il display è spento per risparmiare energia.
+2. **Fase Trigger**: Quando il sensore rileva il buio (`HIGH`), avvia `avviaSequenza()`.
+3. **Esecuzione**: Il semaforo indica la preparazione, i LED si accendono uno alla volta per creare un effetto "scia".
+4. **Fase Sleep**: Appare "GOOD NIGHT" per 3 secondi, poi tutto si spegne completamente.
+5. **Reset**: Il sistema non riparte finché non viene rilevata nuovamente la luce (per evitare loop infiniti).
+
+## 💻 Installazione
+1. Assicurati di avere installato la libreria `LiquidCrystal_I2C`.
+2. Carica il file `.ino` tramite l'IDE di Arduino.
+3. Apri il **Monitor Seriale** (9600 baud) per visualizzare il debug in tempo reale.
+
+---
+*Sviluppato con passione nel Cyber-Lab.*
