@@ -1,0 +1,9 @@
+# Non caricare i file di cattura con le password reali
+*.pcap
+*.hc22000
+*.txt
+
+# Non caricare l'eseguibile di Hashcat
+*.exe
+*.dll
+hashcat.potfile
