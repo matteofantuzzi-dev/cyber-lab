@@ -1,0 +1,5 @@
+- Flipper Zero Firmware (es. Unleashed/Momentum/RogueMaster)
+- ESP32 Marauder Firmware
+- Hashcat (v6.2.6 o superiore)
+- 7-Zip (per estrazione wordlist)
+- qFlipper (per gestione file SD)
