@@ -8,6 +8,7 @@ This repository documents my personal cybersecurity and electronics lab setup.
 * Isolated lab network
 * Arduino Uno & Sensors
 * Educational purposes only.
+* Flipper Zero
 
 ## Projects & Experiments:
 
@@ -16,4 +17,4 @@ This repository documents my personal cybersecurity and electronics lab setup.
 * **[03_sequenza_led_crepuscolare](./03_sequenza_led_crepuscolare)**: A timed 4-LED sequence triggered by light levels.
 
 ---
-*Last update: January 2026*
+*Last update: April 2026*
