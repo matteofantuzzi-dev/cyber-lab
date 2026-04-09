@@ -1,0 +1,22 @@
+Questo è un esempio di un file di log generato dopo l'inseimento dei dati nel portale dell'autenticazione per il wifi
+
+*****************************************
+* EVIL PORTAL SESSION LOG             *
+*****************************************
+
+[STATUS] Starting Evil Portal...
+[STATUS] AP Name: Test_WiFi
+[STATUS] Server started on 172.0.0.1
+[STATUS] DNS Hijacking active.
+
+[EVENT] Client connected to AP
+[EVENT] Captive Portal page served to client
+
+[DATA CATTURATI]:
+-----------------------------------------
+u: Ciao
+p: pippp
+-----------------------------------------
+
+[STATUS] Client disconnected.
+[STATUS] Session log saved to SD Card.
