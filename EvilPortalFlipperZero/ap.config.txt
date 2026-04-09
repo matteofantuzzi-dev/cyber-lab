@@ -1,0 +1,2 @@
+Questo file definisce il nome della rete che appare sui telefoni. Contenuto:
+Test_WiFi
