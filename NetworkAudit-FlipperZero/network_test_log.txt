@@ -1,0 +1,34 @@
+============================================================
+FLIPPER ZERO ETHERNET TEST LOG (ANONYMIZED)
+============================================================
+Scopo: Studio didattico protocolli di rete
+Ambiente: LAN Privata
+------------------------------------------------------------
+
+[LOG - CONNECTIVITY]
+- Interface: W5500 Ethernet
+- IP Assignment: STATIC
+- Local IP: 192.168.X.102 (Oscurato)
+- Gateway: 192.168.X.1 (Oscurato)
+- Status: Link UP
+
+[LOG - DISCOVERY]
+- Protocol: SSDP / mDNS
+- Device Identified: Gateway Router
+- Vendor: Huawei
+- System: Linux UPnP/1.0
+- Note: Risposta ricevuta correttamente su richiesta Discovery.
+
+[LOG - PORT SCANNING]
+- Target: 192.168.X.1
+- Scan Range: Top 100 standard ports
+- Result: 
+    * PORT 53  [OPEN] -> Domain Name System
+    * PORT 80  [OPEN] -> HTTP Web Management
+    * PORT 443 [OPEN] -> HTTPS Web Management
+- Security Note: Le porte rilevate sono conformi ai servizi standard del router.
+
+[CONCLUSION]
+Test completato con successo. La comunicazione tra Flipper Zero 
+e lo switch locale è stabile. Nessun servizio critico inatteso rilevato.
+============================================================
