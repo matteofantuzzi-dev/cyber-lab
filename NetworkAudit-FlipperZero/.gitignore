@@ -1,0 +1,15 @@
+# File di sistema
+.DS_Store
+Thumbs.db
+
+# File temporanei
+*.tmp
+*.log
+*.swp
+
+# Cartelle di sistema degli editor
+.vscode/
+.idea/
+
+# Escludi file di configurazione locali se presenti
+config.local.txt
