@@ -1,0 +1,12 @@
+# Analisi Foto 1: Modulo Hardware Esterno
+
+## 🔍 Descrizione Visiva del File 
+L'immagine mostra il modulo contatore Geiger appoggiato su una superficie di legno. Il componente è completamente racchiuso all'interno di un guscio protettivo personalizzato stampato in 3D di colore verde brillante, caratterizzato da una finitura ruvida. Nella parte inferiore sporgono chiaramente i pin maschi neri pronti per essere inseriti nell'interfaccia GPIO superiore del Flipper Zero.
+
+---
+
+## 🛠️ Dettagli Tecnici dell'Hardware
+
+* **Protezione Strutturale:** Il tubo Geiger-Müller J305 all'interno è fatto di vetro sottilissimo sottovuoto ed è estremamente fragile. Il case verde stampato in 3D ha la funzione vitale di assorbire gli urti meccanici ed evitare che il tubo si rompa durante il trasporto EDC (Everyday Carry).
+* **Interfaccia Meccanica:** La presenza di due blocchi distinti di pettini GPIO permette al modulo di ancorarsi saldamente allo chassis del Flipper Zero, impedendo oscillazioni che potrebbero danneggiare i pin o causare falsi contatti durante le misurazioni in movimento.
+* **Isolamento Elettrico:** La scocca scherma l'utilizzatore dalle piste del circuito stampato dove risiede la tensione a 400V generata dall'elevatore di tensione del modulo, garantendo la totale sicurezza al tatto.
