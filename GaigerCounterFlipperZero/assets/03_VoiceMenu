@@ -1,0 +1,12 @@
+# Analisi Foto 3: Selezione dell'Applicazione Software
+
+## 🔍 Descrizione Visiva del File (`1000251880.jpg`)
+L'immagine documenta la fase di lancio del software di controllo. Il Flipper Zero e il modulo Geiger verde sono accoppiati ed operativi. Sul display è visibile la lista delle applicazioni GPIO incluse nel firmware Momentum. La selezione corrente evidenzia il programma dedicato al sensore: **`[J305] Geiger Counter`**.
+
+---
+
+## 💾 Configurazione e Interfacciamento Logico
+
+* **Interrupt Hardware:** L'applicazione configura il microcontrollore del Flipper per mettersi in ascolto sugli impulsi digitali in arrivo dal pin di input (solitamente configurato su `PC3` o `PC1`). Ogni scarica elettrica del tubo Geiger viene registrata dal sistema in tempo reale come un "evento".
+* **Calibrazione del Profilo J305:** La dicitura `[J305]` indica che il software sta applicando lo specifico fattore di conversione matematico tarato sulla sensibilità di questo preciso modello di tubo. Questo permette di convertire il numero puro di click nell'unità di misura equivalente dell'assorbimento biologico (µSv/h).
+* **Filtro Antirimbalzo:** Il codice dell'applicazione applica un debouncing digitale per ripulire il segnale, evitando che i disturbi elettromagnetici della linea vengano scambiati per particelle radioattive.
