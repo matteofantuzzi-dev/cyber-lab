@@ -2,7 +2,7 @@
 
 ## 🔍 Descrizione Visiva del File (`1000251880.jpg`)
 L'immagine documenta la fase di lancio del software di controllo. Il Flipper Zero e il modulo Geiger verde sono accoppiati ed operativi. Sul display è visibile la lista delle applicazioni GPIO incluse nel firmware Momentum. La selezione corrente evidenzia il programma dedicato al sensore: **`[J305] Geiger Counter`**.
-
+ 
 ---
 
 ## 💾 Configurazione e Interfacciamento Logico
