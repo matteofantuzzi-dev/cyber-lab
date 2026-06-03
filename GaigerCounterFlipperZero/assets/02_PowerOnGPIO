@@ -1,0 +1,12 @@
+# Analisi Foto 2: Attivazione Alimentazione Bus GPIO
+
+## 🔍 Descrizione Visiva del File (`1000251879.jpg`)
+L'immagine mostra il Flipper Zero inserito nella sua custodia in silicone arancione, con il modulo Geiger verde installato sulla parte superiore. Lo schermo LCD retroilluminato mostra il menu di controllo manuale del modulo GPIO del firmware Momentum. Il cursore di sistema evidenzia la configurazione attiva sulla riga: **`5V on GPIO < ON >`**.
+
+---
+
+## ⚙️ Logica Operativa del Firmware
+
+* **Gestione Energetica:** Di default, il Flipper Zero mantiene i pin GPIO disalimentati per evitare cortocircuiti accidentali causati da oggetti metallici esterni e per risparmiare la batteria.
+* **Abilitazione Hardware:** Impostando il valore su `< ON >`, il firmware attiva l'erogazione della corrente a 5V DC sulla linea del pin GPIO dedicata al modulo esterno.
+* **Alimentazione del Circuito:** Ricevendo i 5V stabili dal Flipper, il circuito integrato nel modulo verde si accende e avvia l'inverter interno, che trasforma la bassa tensione nei ~400V necessari al funzionamento del tubo a scarica di gas.
