@@ -1,0 +1,12 @@
+# Analisi Foto 4: Misurazione del Fondo Naturale Real-Time
+
+## 🔍 Descrizione Visiva del File (`1000251881.jpg`)
+L'immagine mostra l'interfaccia grafica operativa dell'applicazione Geiger Counter in esecuzione. Nella parte superiore dello schermo LCD sono ben visibili i dati metrici istantanei rilevati dal modulo: **`0 cps - 26 cpm`**. La metà inferiore del display mostra un istogramma a barre verticali in continuo aggiornamento temporale.
+
+---
+
+## 📈 Analisi Scientifica dei Dati Rilevati
+
+* **Interpretazione del Valore `26 cpm` (Counts Per Minute):** Il valore indica che il tubo ha registrato 26 impulsi nell'arco dell'ultimo minuto. Questo dato rientra perfettamente nella media statistica della **Radiazione di Fondo Naturale** terrestre per ambienti chiusi (fissata normalmente tra 10 e 40 CPM). Conferma che il modulo funziona correttamente e che l'ambiente domestico di test è sicuro.
+* **Significato del Valore `0 cps` (Counts Per Second):** Indica che le particelle radioattive naturali colpiscono il sensore in modo sporadico e discontinuo. Non essendoci flussi concentrati o anomalie artificiali in corso, il conteggio sul singolo secondo rimane fisso a zero.
+* **Analisi dell'Istogramma Grafico:** Ogni barra verticale rappresenta graficamente il momento esatto in cui una particella ionizzante ha attraversato il tubo J305. La distribuzione casuale e distanziata delle barre conferma la natura probabilistica del fondo radiologico ambientale stazionario.
