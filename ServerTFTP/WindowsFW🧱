@@ -1,0 +1,8 @@
+Problema: Errore di Connection Refused e Request Timed Out durante le chiamate ICMP e TFTP.
+
+Causa: Firewall attivo e profilo di rete impostato inizialmente su Pubblico.
+
+Soluzione: Modificato il profilo di rete in Privato su entrambi gli host ed eseguite le eccezioni in ingresso per la porta UDP 69 e per ICMPv4 via prompt amministrativo:
+
+netsh advfirewall firewall add rule name="Allow ICMPv4" protocol=icmpv4:8,any dir=in action=allow
+netsh advfirewall firewall add rule name="TFTP UDP 69" dir=in action=allow protocol=UDP localport=69
