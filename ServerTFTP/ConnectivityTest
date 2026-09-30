@@ -1,0 +1,6 @@
+Prima di inviare i file/pacchetti al pc server è opportuno verificare che il pc client raggiunga il PC Server.
+Questo viene fatto con il seguente comando ping:
+
+ping 192.168.1.x 
+
+Questo comando si può eseguire sul Command Prompt del PC Client
