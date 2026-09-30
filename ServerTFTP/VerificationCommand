@@ -1,0 +1,6 @@
+Comandi eseguiti su PUTTY:
+
+Switch# show ip interface brief
+Switch# show vlan brief
+
+N.B. Lo sitch è stato collegato al computer tramite cavo console.
