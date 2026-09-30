@@ -1,0 +1,20 @@
+I test di trasferimento file (operazione PUT) sono stati eseguiti con successo per due diverse tipologie di estensione file dal client verso il server (192.168.1.10):
+
+Test 1 — File di Testo (.txt):
+
+File: test.txt
+
+Esito: Trasferimento completato con esito positivo (1 block transferred in 0 seconds con hash MD5 generato).
+
+Test 2 — Foglio di Calcolo Excel (.xlsx):
+
+File: dati_lab.xlsx (o nome file corrispondente)
+
+Esito: Trasferimento binario completato correttamente senza alterazione dell'integrità del file o della struttura del formato OpenXML.
+
+Tutti i file trasferiti sono stati correttamente ricevuti e verificati all'interno della cartella di destinazione C:\tftp_root sul PC Server.
+
+
+N.B.  Questi due test sono stati effettuati usando il software tftpd64 e andando nella sezione "TFTP Client" e impostando l'indirizzo IP,
+il numero di porta e il percorso dove sono presenti i file da trasferire sul PC Server e poi successivamente cliccare sul tasto "PUT".
+Se l'operazione andrà a buon fine apparirà una schermata con scritto "X block transmitted".
