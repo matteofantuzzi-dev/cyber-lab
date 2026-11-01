@@ -1,0 +1,11 @@
+**Conclusioni e Strategie di Mitigazione**
+
+Il test dimostra come l'utilizzo di software non verificato o compromesso a monte possa esporre un'infrastruttura a rischi critici di compromissione totale.
+
+Azioni correttive e raccomandazioni di sicurezza:
+
+-Patch Management: Sostituire immediatamente software obsoleti o non supportati con versioni stabili prese solo da repository ufficiali e verificati.
+
+-Network Segmentation: Isolare i servizi di test all'interno di VLAN protette da firewall rigorosi per impedire l'accesso non autorizzato dall'esterno.
+
+-Monitoraggio dei Servizi: Implementare sistemi di Intrusion Detection (IDS) in grado di rilevare anomalie sul traffico di rete e sulle porte non standard (come la porta TCP 6200).
